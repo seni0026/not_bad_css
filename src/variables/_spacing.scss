@@ -1,0 +1,22 @@
+$spacing: (
+    'xs': 5px,
+    'sm': 10px,
+    'md': 20px,
+    'lg': 30px,
+    'xl': 40px,
+    '2xl': 50px,
+    '3xl': 60px,
+    '4xl': 70px,
+    '5xl': 80px,
+    '6xl': 90px
+);
+
+/********** Margins and Paddings ***********/
+@each $space, $value in $spacing {
+    .m-#{$space} {
+        margin: $value;
+    }
+    .p-#{$space} {
+        padding: $value;
+    }
+}

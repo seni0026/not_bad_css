@@ -3,6 +3,7 @@
 @use './font-sizes' as sizes;
 @use './font-weights' as weights;
 @use './line-heights' as lh;
+@use './letter-spaces' as ls;
 
 $fonts: (
     'montserrat': fonts.$font-montserrat,
@@ -38,5 +39,12 @@ $font-body: map.get($fonts, 'open-sans');
 @each $height, $value in lh.$line-heights {
     .lh-#{$height} {
         line-height: $value;
+    }
+}
+
+/********** Letter Spaces ***********/
+@each $space, $value in ls.$letter-spaces {
+    .tracking-#{$space} {
+        letter-spacing: $value;
     }
 }
