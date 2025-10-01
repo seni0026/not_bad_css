@@ -90,6 +90,87 @@ meter {
 }
 
 /* Custom CSS */
+/********** Margins and Paddings ***********/
+.m-xs {
+  margin: 5px;
+}
+
+.p-xs {
+  padding: 5px;
+}
+
+.m-sm {
+  margin: 10px;
+}
+
+.p-sm {
+  padding: 10px;
+}
+
+.m-md {
+  margin: 20px;
+}
+
+.p-md {
+  padding: 20px;
+}
+
+.m-lg {
+  margin: 30px;
+}
+
+.p-lg {
+  padding: 30px;
+}
+
+.m-xl {
+  margin: 40px;
+}
+
+.p-xl {
+  padding: 40px;
+}
+
+.m-2xl {
+  margin: 50px;
+}
+
+.p-2xl {
+  padding: 50px;
+}
+
+.m-3xl {
+  margin: 60px;
+}
+
+.p-3xl {
+  padding: 60px;
+}
+
+.m-4xl {
+  margin: 70px;
+}
+
+.p-4xl {
+  padding: 70px;
+}
+
+.m-5xl {
+  margin: 80px;
+}
+
+.p-5xl {
+  padding: 80px;
+}
+
+.m-6xl {
+  margin: 90px;
+}
+
+.p-6xl {
+  padding: 90px;
+}
+
 /********** Font Family ***********/
 .font-heading {
   font-family: "Montserrat", sans-serif;
@@ -196,6 +277,35 @@ meter {
 
 .lh-base-5 {
   line-height: 5;
+}
+
+/********** Letter Spaces ***********/
+.tracking-tighter {
+  letter-spacing: -2.5;
+}
+
+.tracking-tight {
+  letter-spacing: -1.5;
+}
+
+.tracking-normal {
+  letter-spacing: 1px;
+}
+
+.tracking-wide {
+  letter-spacing: 4px;
+}
+
+.tracking-wider {
+  letter-spacing: 6px;
+}
+
+.tracking-widest {
+  letter-spacing: 8px;
+}
+
+.tracking-ultra-wide {
+  letter-spacing: 10px;
 }
 
 /********** Styles for h1 - h6 and p tags ***********/
