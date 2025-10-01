@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../fonts/' as fonts;
+@use './font-sizes' as sizes;
+@use './font-weights' as weights;
+@use './line-heights' as lh;
+
+$fonts: (
+    'montserrat': fonts.$font-montserrat,
+    'open-sans': fonts.$font-open-sans
+);
+
+$font-heading: map.get($fonts, 'montserrat');
+$font-body: map.get($fonts, 'open-sans');
+
+/********** Font Family ***********/
+.font-heading {
+    font-family: $font-heading;
+}
+.font-body {
+    font-family: $font-body;
+}
+
+/********** Font Sizes ***********/
+@each $size, $value in sizes.$font-sizes {
+    .font-#{$size} {
+        font-size: $value;
+    }
+}
+
+/********** Font Weights ***********/
+@each $weight, $value in weights.$font-weights {
+    .font-#{$weight} {
+        font-weight: $value;
+    }
+}
+
+/********** Line Heights ***********/
+@each $height, $value in lh.$line-heights {
+    .lh-#{$height} {
+        line-height: $value;
+    }
+}
