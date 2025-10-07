@@ -11,6 +11,19 @@ $spacing: (
     '6xl': 90px
 );
 
+$padding: (
+    '1': 0.75rem,
+    '2': 1rem,
+    '3': 1.5rem,
+    '4': 2rem,
+    '5': 3rem,
+    '6': 4rem,
+    '7': 5rem,
+    '8': 6rem,
+    '9': 7rem,
+    '10': 8rem
+);
+
 /********** Margins and Paddings ***********/
 @each $space, $value in $spacing {
     .m-#{$space} {
@@ -18,5 +31,55 @@ $spacing: (
     }
     .p-#{$space} {
         padding: $value;
+    }
+}
+
+@each $direction, $value in $padding {
+    .pt-#{$direction} {
+        padding-top: $value;
+    }
+
+    .pb-#{$direction} {
+        padding-bottom: $value;
+    }
+
+    .pl-#{$direction} {
+        padding-left: $value;
+    }
+
+    .pr-#{$direction} {
+        padding-right: $value;
+    }
+
+    .px-#{$direction} {
+        padding:0 $value; 
+    }
+    
+    .py-#{$direction} {
+        padding:$value 0;
+    }
+
+    .mt-#{$direction} {
+        margin-top: $value;
+    }
+
+    .mb-#{$direction} {
+        margin-bottom: $value;
+    }
+
+    .ml-#{$direction} {
+        margin-left: $value;
+    }
+
+    .mr-#{$direction} {
+        margin-right: $value;
+    }
+
+    .mx-#{$direction} {
+        margin: 0 $value;
+    }
+
+    .my-#{$direction} {
+        margin: $value 0;
     }
 }
