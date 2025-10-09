@@ -1,0 +1,110 @@
+@use 'sass:map';
+@use '../variables/colors' as c;
+@use '../variables/font-sizes' as fs;
+@use '../variables/font-weights' as fw;
+@use '../variables/spacing' as sp;
+@use '../variables/line-heights' as lh;
+@use '../variables/letter-spaces' as ls;
+
+$forms-color-primary: map.get(map.get(c.$colors, 'primary'), 500);
+$forms-color-success: map.get(map.get(c.$colors, 'success'), 500);
+$forms-color-danger: map.get(map.get(c.$colors, 'danger'), 600);
+$forms-color-border: map.get(map.get(c.$colors, 'neutral'), 300);
+$forms-color-text: map.get(map.get(c.$colors, 'neutral'), 900);
+$forms-color-text-light: map.get(map.get(c.$colors, 'neutral'), 500);
+$forms-color-bg-light: map.get(map.get(c.$colors, 'neutral'), 50);
+$forms-radius-md: 6px;
+
+/********** Form Base ***********/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(sp.$spacing, 'md');
+  width: 100%;
+  max-width: 480px;
+}
+
+/********** Inputs/ Textarea/ Select ***********/
+.input,
+.textarea,
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(sp.$spacing, 'xs');
+
+  label {
+    font-weight: map.get(fw.$font-weights, 'medium');
+    color: $forms-color-text;
+    margin-bottom: map.get(sp.$spacing, 'xs');
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: map.get(sp.$spacing, 'sm') map.get(sp.$spacing, 'md');
+    border: 1px solid $forms-color-border;
+    border-radius: $forms-radius-md;
+    background-color: $forms-color-bg-light;
+    color: $forms-color-text;
+    font-size: map.get(fs.$font-sizes, 'base');
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &::placeholder {
+      color: $forms-color-text-light;
+    }
+
+    &:hover {
+      border-color: darken($forms-color-border, 10%);
+    }
+
+    &:focus {
+      border-color: $forms-color-primary;
+      box-shadow: 0 0 0 3px rgba($forms-color-primary, 0.25);
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background-color: lighten($forms-color-bg-light, 4%);
+    }
+
+    &.is-valid {
+      border-color: $forms-color-success;
+      box-shadow: 0 0 0 3px rgba($forms-color-success, 0.25);
+    }
+
+    &.is-invalid {
+      border-color: $forms-color-danger;
+      box-shadow: 0 0 0 3px rgba($forms-color-danger, 0.25);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: map.get(lh.$line-heights, 'base');
+  }
+}
+
+/********** Checkbox & Radio ***********/
+.check-group {
+  display: flex;
+  align-items: center;
+  gap: map.get(sp.$spacing, 'xs');
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: 18px;
+    height: 18px;
+    accent-color: $forms-color-primary;
+    cursor: pointer;
+  }
+
+  label {
+    color: $forms-color-text;
+    font-size: map.get(fs.$font-sizes, 'base');
+    cursor: pointer;
+  }
+}
