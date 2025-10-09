@@ -1,0 +1,9 @@
+@use '../variables/colors' as v;
+
+@each $name, $scale in v.$colors {
+  @each $shade, $value in $scale {
+    .text-#{$name}-#{$shade}   { color: var(--color-#{$name}-#{$shade}); }
+    .bg-#{$name}-#{$shade}     { background-color: var(--color-#{$name}-#{$shade}); }
+    .border-#{$name}-#{$shade} { border-color: var(--color-#{$name}-#{$shade}); }
+  }
+}
