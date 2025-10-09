@@ -1,0 +1,126 @@
+@use 'sass:map';
+@use '../variables/colors' as c;
+@use '../variables/font-sizes' as fs;
+@use '../variables/font-weights' as fw;
+@use '../variables/spacing' as sp;
+@use '../variables/line-heights' as lh;
+@use '../variables/letter-spaces' as ls;
+
+$inputs-color-primary: map.get(map.get(c.$colors, 'primary'), 500);
+$inputs-color-success: map.get(map.get(c.$colors, 'success'), 500);
+$inputs-color-danger: map.get(map.get(c.$colors, 'danger'), 600);
+$inputs-color-border: map.get(map.get(c.$colors, 'neutral'), 300);
+$inputs-color-text: map.get(map.get(c.$colors, 'neutral'), 900);
+$inputs-color-text-light: map.get(map.get(c.$colors, 'neutral'), 500);
+$inputs-color-bg-light: map.get(map.get(c.$colors, 'neutral'), 50);
+$inputs-radius-md: 6px;
+
+/********** Input Base ***********/
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(sp.$spacing, 'xs');
+
+  label {
+    font-weight: map.get(fw.$font-weights, 'medium');
+    color: $inputs-color-text;
+    margin-bottom: map.get(sp.$spacing, 'xs');
+  }
+
+  input {
+    width: 100%;
+    padding: map.get(sp.$spacing, 'sm') map.get(sp.$spacing, 'md');
+    border: 1px solid $inputs-color-border;
+    border-radius: $inputs-radius-md;
+    background-color: $inputs-color-bg-light;
+    color: $inputs-color-text;
+    font-size: map.get(fs.$font-sizes, 'base');
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &::placeholder {
+      color: $inputs-color-text-light;
+    }
+
+    &:hover {
+      border-color: darken($inputs-color-border, 10%);
+    }
+
+    &:focus {
+      border-color: $inputs-color-primary;
+      box-shadow: 0 0 0 3px rgba($inputs-color-primary, 0.25);
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background-color: lighten($inputs-color-bg-light, 4%);
+    }
+
+    &.is-valid {
+      border-color: $inputs-color-success;
+      box-shadow: 0 0 0 3px rgba($inputs-color-success, 0.25);
+    }
+
+    &.is-invalid {
+      border-color: $inputs-color-danger;
+      box-shadow: 0 0 0 3px rgba($inputs-color-danger, 0.25);
+    }
+  }
+}
+
+/********** Input Sizes ***********/
+.input-sm input {
+  padding: map.get(sp.$spacing, 'xs') map.get(sp.$spacing, 'sm');
+  font-size: map.get(fs.$font-sizes, 'sm');
+}
+
+.input-lg input {
+  padding: map.get(sp.$spacing, 'md') map.get(sp.$spacing, 'lg');
+  font-size: map.get(fs.$font-sizes, 'lg');
+}
+
+/********** Input Icon ***********/
+.input-icon {
+  position: relative;
+
+  input {
+    padding-left: 2.5rem;
+  }
+
+  .icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $inputs-color-text-light;
+    pointer-events: none;
+  }
+}
+
+/********** Floating Label Input ***********/
+.input-floating {
+  position: relative;
+
+  input {
+    padding: 1rem 0.75rem 0.25rem;
+  }
+
+  label {
+    position: absolute;
+    left: 0.75rem;
+    top: 1rem;
+    color: $inputs-color-text-light;
+    font-size: map.get(fs.$font-sizes, 'base');
+    pointer-events: none;
+    transition: 0.2s ease all;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: 0.25rem;
+    left: 0.75rem;
+    font-size: map.get(fs.$font-sizes, 'xs');
+    color: $inputs-color-primary;
+  }
+}

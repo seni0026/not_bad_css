@@ -1043,6 +1043,243 @@ meter {
   background: var(--color-neutral-200);
 }
 
+/********** Form Base ***********/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/********** Inputs/ Textarea/ Select ***********/
+.input,
+.textarea,
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input label,
+.textarea label,
+.select label {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 5px;
+}
+.input input,
+.input textarea,
+.input select,
+.textarea input,
+.textarea textarea,
+.textarea select,
+.select input,
+.select textarea,
+.select select {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input input::placeholder,
+.input textarea::placeholder,
+.input select::placeholder,
+.textarea input::placeholder,
+.textarea textarea::placeholder,
+.textarea select::placeholder,
+.select input::placeholder,
+.select textarea::placeholder,
+.select select::placeholder {
+  color: #6b7280;
+}
+.input input:hover,
+.input textarea:hover,
+.input select:hover,
+.textarea input:hover,
+.textarea textarea:hover,
+.textarea select:hover,
+.select input:hover,
+.select textarea:hover,
+.select select:hover {
+  border-color: rgb(180.3902439024, 186.8780487805, 196.6097560976);
+}
+.input input:focus,
+.input textarea:focus,
+.input select:focus,
+.textarea input:focus,
+.textarea textarea:focus,
+.textarea select:focus,
+.select input:focus,
+.select textarea:focus,
+.select select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+.input input:disabled,
+.input textarea:disabled,
+.input select:disabled,
+.textarea input:disabled,
+.textarea textarea:disabled,
+.textarea select:disabled,
+.select input:disabled,
+.select textarea:disabled,
+.select select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: white;
+}
+.input input.is-valid,
+.input textarea.is-valid,
+.input select.is-valid,
+.textarea input.is-valid,
+.textarea textarea.is-valid,
+.textarea select.is-valid,
+.select input.is-valid,
+.select textarea.is-valid,
+.select select.is-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+.input input.is-invalid,
+.input textarea.is-invalid,
+.input select.is-invalid,
+.textarea input.is-invalid,
+.textarea textarea.is-invalid,
+.textarea select.is-invalid,
+.select input.is-invalid,
+.select textarea.is-invalid,
+.select select.is-invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+}
+.input textarea,
+.textarea textarea,
+.select textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/********** Checkbox & Radio ***********/
+.check-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.check-group input[type=checkbox],
+.check-group input[type=radio] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+.check-group label {
+  color: #111827;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/********** Input Base ***********/
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input label {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 5px;
+}
+.input input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input input::placeholder {
+  color: #6b7280;
+}
+.input input:hover {
+  border-color: rgb(180.3902439024, 186.8780487805, 196.6097560976);
+}
+.input input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  outline: none;
+}
+.input input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: white;
+}
+.input input.is-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+.input input.is-invalid {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+}
+
+/********** Input Sizes ***********/
+.input-sm input {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.input-lg input {
+  padding: 20px 30px;
+  font-size: 18px;
+}
+
+/********** Input Icon ***********/
+.input-icon {
+  position: relative;
+}
+.input-icon input {
+  padding-left: 2.5rem;
+}
+.input-icon .icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+}
+
+/********** Floating Label Input ***********/
+.input-floating {
+  position: relative;
+}
+.input-floating input {
+  padding: 1rem 0.75rem 0.25rem;
+}
+.input-floating label {
+  position: absolute;
+  left: 0.75rem;
+  top: 1rem;
+  color: #6b7280;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+.input-floating input:focus + label,
+.input-floating input:not(:placeholder-shown) + label {
+  top: 0.25rem;
+  left: 0.75rem;
+  font-size: 12px;
+  color: #6366f1;
+}
+
 /********** Styles for h1 - h6 and p tags ***********/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;

@@ -33,5 +33,44 @@
 <div class="bg-success-400" style="padding:8px;border-radius:8px">.bg-success-400</div>
 <div class="border-danger-500" style="border:2px solid;padding:8px;border-radius:8px">.border-danger-500</div>
 
+<form class="form mt-2">
+
+    <div class="input">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Enter your name" />
+    </div>
+
+    <div class="input">
+      <label for="email">Email (valid)</label>
+      <input id="email" type="email" placeholder="you@example.com" class="is-valid" />
+    </div>
+
+    <div class="input">
+      <label for="password">Password (invalid)</label>
+      <input id="password" type="password" placeholder="Enter password" class="is-invalid input-lg" />
+    </div>
+
+    <div class="input">
+      <label for="disabled">Disabled</label>
+      <input id="disabled" type="text" value="Not editable" disabled />
+    </div>
+
+    <div class="textarea">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message..."></textarea>
+    </div>
+
+    <div class="select">
+      <label for="country">Country</label>
+      <select id="country">
+        <option value="">Select country...</option>
+        <option>Canada</option>
+        <option>USA</option>
+        <option>Germany</option>
+        <option>Japan</option>
+      </select>
+    </div>
+  </form>
+
 </body>
 </html>
