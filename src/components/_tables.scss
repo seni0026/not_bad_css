@@ -1,0 +1,185 @@
+// Table variables
+$table-border-color: var(--color-neutral-200);
+$table-stripe-color: var(--color-neutral-50);
+$table-hover-color: var(--color-neutral-100);
+$table-header-bg: var(--color-neutral-50);
+$table-header-color: var(--color-neutral-800);
+$table-cell-padding: map-get($padding, '2');
+$table-border-width: 1px;
+$table-border-radius: var(--radius);
+
+// Base table styles
+.table {
+    width: 100%;
+    margin-bottom: map-get($spacing, 'md');
+    background-color: transparent;
+    border-collapse: collapse;
+    font-family: $font-body;
+
+    // Table header
+    thead {
+        background-color: $table-header-bg;
+
+        th {
+            padding: $table-cell-padding;
+            font-weight: map-get(weights.$font-weights, 'semibold');
+            color: $table-header-color;
+            text-align: left;
+            vertical-align: bottom;
+            border-bottom: (2 * $table-border-width) solid $table-border-color;
+        }
+    }
+
+    // Table body
+    tbody {
+        tr {
+            &:not(:last-child) {
+                border-bottom: $table-border-width solid $table-border-color;
+            }
+        }
+
+        td {
+            padding: $table-cell-padding;
+            vertical-align: middle;
+        }
+    }
+
+    // Table footer
+    tfoot {
+        tr {
+            border-top: (2 * $table-border-width) solid $table-border-color;
+        }
+
+        td {
+            padding: $table-cell-padding;
+            font-weight: map-get(weights.$font-weights, 'medium');
+        }
+    }
+}
+
+// Bordered table variant
+.table-bordered {
+    border: $table-border-width solid $table-border-color;
+    border-radius: $table-border-radius;
+
+    th,
+    td {
+        border: $table-border-width solid $table-border-color;
+    }
+}
+
+// Striped table variant
+.table-striped {
+    tbody {
+        tr:nth-child(odd) {
+            background-color: $table-stripe-color;
+        }
+    }
+}
+
+// Hoverable table variant
+.table-hover {
+    tbody {
+        tr:hover {
+            background-color: $table-hover-color;
+        }
+    }
+}
+
+// Compact table variant
+.table-compact {
+    th,
+    td {
+        padding: map-get($padding, '1');
+    }
+}
+
+// Responsive table wrapper
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: map-get($spacing, 'md');
+
+    // Remove margin from table inside responsive wrapper
+    .table {
+        margin-bottom: 0;
+    }
+}
+
+// Table variations
+.table-primary {
+    background-color: var(--color-primary-50);
+    th { background-color: var(--color-primary-100); }
+}
+
+.table-success {
+    background-color: var(--color-success-400);
+    th { background-color: var(--color-success-500); }
+}
+
+.table-danger {
+    background-color: var(--color-danger-400);
+    th { background-color: var(--color-danger-500); }
+}
+
+.table-warning {
+    background-color: var(--color-warning-400);
+    th { background-color: var(--color-warning-500); }
+}
+
+// Dark theme table
+.table-dark {
+    color: var(--color-neutral-50);
+    background-color: var(--color-neutral-800);
+
+    thead {
+        background-color: var(--color-neutral-900);
+    }
+
+    th,
+    td {
+        border-color: var(--color-neutral-700);
+    }
+
+    &.table-striped {
+        tbody tr:nth-child(odd) {
+            background-color: var(--color-neutral-700);
+        }
+    }
+
+    &.table-hover {
+        tbody tr:hover {
+            background-color: var(--color-neutral-600);
+        }
+    }
+}
+
+// Table caption
+caption {
+    padding: map-get($padding, '2');
+    color: var(--color-neutral-500);
+    text-align: left;
+    caption-side: bottom;
+    font-style: italic;
+}
+
+// Small text in tables
+.table-sm {
+    font-size: map-get(sizes.$font-sizes, 'sm');
+}
+
+// Vertical alignment utilities
+.table-align-middle td,
+.table-align-middle th {
+    vertical-align: middle;
+}
+
+.table-align-top td,
+.table-align-top th {
+    vertical-align: top;
+}
+
+.table-align-bottom td,
+.table-align-bottom th {
+    vertical-align: bottom;
+}
