@@ -6,71 +6,282 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Not Bad CSS Framework</title>
 </head>
-<body>
-    <h1>Not Bad CSS Framework</h1>
-    <h2>Not Bad CSS Framework</h2>
-    <h3>Not Bad CSS Framework</h3>
-    <h4>Not Bad CSS Framework</h4>
-    <h5>Not Bad CSS Framework</h5>
-    <h6>Not Bad CSS Framework</h6>
+<body class="bg-neutral-100 font-body text-neutral-800">
+
+  <main>
+    <div class="px-2">
+        <!-- Header Section -->
+        <header class="py-2">
+            <h1 class="font-heading font-bold text-primary-900">Not Bad CSS Framework</h1>
+            <p class="font-lg text-neutral-600">A lite weight CSS framework developed for building modern websites. It's not bad CSS!</p>
+        </header>
+        <!-- Typography Section -->
+        <section class="my-4">
+            <h2 class="font-bold mb-4">Typography</h2>
+            <div>
+                <h3 class="mb-4">Headings</h3>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <h3 class="mt-5 mb-4">Font Utilities</h3>
+                <p class="font-xs">.font-xs</p>
+                <p class="font-sm">.font-sm</p>
+                <p class="font-base">.font-base (default)</p>
+                <p class="font-lg">.font-lg</p>
+                <p class="font-xl">.font-xl</p>
+                <p class="font-2xl">.font-2xl</p>
+                <p class="font-3xl">.font-3xl</p>
+                <p class="font-4xl">.font-4xl</p>
+                <p class="font-5xl">.font-5xl</p>
+                <p class="font-6xl">.font-6xl</p>
+                <h3 class="mt-5 mb-4">Font Weights</h3>
+                <p class="font-thin">.font-thin</p>
+                <p class="font-light">.font-light</p>
+                <p class="font-normal">.font-normal</p>
+                <p class="font-medium">.font-medium</p>
+                <p class="font-semibold">.font-semibold</p>
+                <p class="font-bold">.font-bold</p>
+                <p class="font-extrabold">.font-extrabold</p>
+                <h3 class="mt-5 mb-4">Letter Spacing</h3>
+                <p class="tracking-tighter">.tracking-tighter</p>
+                <p class="tracking-tight">.tracking-tight</p>
+                <p class="tracking-normal">.tracking-normal</p>
+                <p class="tracking-wide">.tracking-wide</p>
+                <p class="tracking-wider">.tracking-wider</p>
+                <p class="tracking-widest">.tracking-widest</p>
+            </div>
+        </section>
+        <!-- Colors Section -->
+        <section class="my-8">
+            <h2 class="font-bold mb-4">Colors</h2>
+            <div class="p-4">
+                <p class="mb-4">Use classes like <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.bg-primary-500</code>, <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.text-neutral-800</code>, or <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.border-danger-500</code>.</p>
     
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit id, sed culpa aspernatur est quam earum nisi eius repudiandae qui molestiae et, consectetur vitae nesciunt! Placeat quos dolorum labore voluptatem.
-    Quis temporibus aliquam necessitatibus dolore at maiores sapiente accusantium, vel tenetur sit, atque, minima similique cum omnis fuga voluptates voluptate ab quas totam aspernatur? At quam officiis culpa natus nemo.
-    Nostrum quas corrupti pariatur quos accusamus totam, saepe id ipsam magnam nulla, alias aspernatur cupiditate reiciendis, dolores mollitia! Saepe illo architecto dolore provident voluptatem libero pariatur dicta ut omnis repudiandae?
-    Dolor, voluptates saepe! Molestiae voluptatibus porro magni alias ratione nesciunt qui est sapiente sit quos, at adipisci suscipit enim dolorum delectus. Quis commodi nihil pariatur ullam eaque quaerat placeat asperiores.</p>
-
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0">
-  <button class="btn btn-sm btn-primary">Primary</button>
-  <button class="btn btn-md btn-success">Success</button>
-  <button class="btn btn-lg btn-warning">Warning</button>
-  <button class="btn btn-md btn-danger" disabled>Danger</button>
-  <button class="btn btn-md btn-primary-outline">Outline</button>
-  <button class="btn btn-md btn-primary-ghost">Ghost</button>
-  <button class="btn btn-md btn-neutral">Neutral</button>
-</div>
-
-<p class="text-primary-600">.text-primary-600</p>
-<div class="bg-success-400" style="padding:8px;border-radius:8px">.bg-success-400</div>
-<div class="border-danger-500" style="border:2px solid;padding:8px;border-radius:8px">.border-danger-500</div>
-
-<form class="form mt-2">
-
-    <div class="input">
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Enter your name" />
+                <!-- Primary Colors -->
+                <h4 class="font-semibold mb-2">Primary</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <div class="bg-primary-50 p-md text-center">50</div>
+                    <div class="bg-primary-100 p-md text-center">100</div>
+                    <div class="bg-primary-200 p-md text-center">200</div>
+                    <div class="bg-primary-300 p-md text-center">300</div>
+                    <div class="bg-primary-400 p-md text-center">400</div>
+                    <div class="bg-primary-500 p-md text-center text-neutral-50">500</div>
+                    <div class="bg-primary-600 p-md text-center text-neutral-50">600</div>
+                    <div class="bg-primary-700 p-md text-center text-neutral-50">700</div>
+                    <div class="bg-primary-800 p-md text-center text-neutral-50">800</div>
+                    <div class="bg-primary-900 p-md text-center text-neutral-50">900</div>
+                </div>
+                <!-- Neutral Colors -->
+                <h4 class="font-semibold mt-4 mb-2">Neutral</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <div class="bg-neutral-50 p-md text-center">50</div>
+                    <div class="bg-neutral-100 p-md text-center">100</div>
+                    <div class="bg-neutral-200 p-md text-center">200</div>
+                    <div class="bg-neutral-300 p-md text-center">300</div>
+                    <div class="bg-neutral-400 p-md text-center">400</div>
+                    <div class="bg-neutral-500 p-md text-center text-neutral-50">500</div>
+                    <div class="bg-neutral-600 p-md text-center text-neutral-50">600</div>
+                    <div class="bg-neutral-700 p-md text-center text-neutral-50">700</div>
+                    <div class="bg-neutral-800 p-md text-center text-neutral-50">800</div>
+                    <div class="bg-neutral-900 p-md text-center text-neutral-50">900</div>
+                </div>
+                <!-- Status Colors -->
+                <div class="mt-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                    <div>
+                        <h4 class="font-semibold mt-4 mb-2">Success</h4>
+                        <div class="bg-success-400 p-md text-center">400</div>
+                        <div class="bg-success-500 p-md text-center text-neutral-50 mt-2">500</div>
+                        <div class="bg-success-600 p-md text-center text-neutral-50 mt-2">600</div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mt-4 mb-2">Warning</h4>
+                        <div class="bg-warning-400 p-md text-center">400</div>
+                        <div class="bg-warning-500 p-md text-center text-neutral-50 mt-2">500</div>
+                        <div class="bg-warning-600 p-md text-center text-neutral-50 mt-2">600</div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mt-4 mb-2">Danger</h4>
+                        <div class="bg-danger-400 p-md text-center">400</div>
+                        <div class="bg-danger-500 p-md text-center text-neutral-50 mt-2">500</div>
+                        <div class="bg-danger-600 p-md text-center text-neutral-50 mt-2">600</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Spacing Section -->
+        <section class="my-8">
+            <h2 class="font-bold mb-4">Spacing</h2>
+            <div>
+                <p class="mb-4">Use margin (<code>m</code>, <code>mx</code>, <code>my</code>, <code>mt</code>, etc.) and padding (<code>p</code>, <code>px</code>, <code>py</code>, <code>pt</code>, etc.) utilities.</p>
+    
+                <div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Padding</h4>
+                        <div class="p-1">
+                          <div class="p-1 text-center font-sm">.p-2xl</div>
+                        </div>
+                        <div class="p-2 mt-2">
+                          <div class="p-1 text-center font-sm">.p-3xl</div>
+                        </div>
+                        <div class="p-3 mt-2">
+                          <div class="p-1 text-center font-sm">.p-4xl</div>
+                        </div>
+                        <div class="p-4 mt-2">
+                          <div class="p-1 text-center font-sm">.p-sm</div>
+                        </div>
+                        <div class="p-5 mt-2">
+                          <div class="p-1 text-center font-sm">.p-md</div>
+                        </div>
+                        <div class="p-6 mt-2">
+                          <div class="p-6 text-center font-sm">.p-lg</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold my-2">Margin</h4>
+                            <div class="m-1 p-1 text-center font-sm">.m-2xl</div>
+                        <div class="mt-2">
+                            <div class="m-2 p-1 text-center font-sm">.m-3xl</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="m-3 p-1 text-center font-sm">.m-4xl</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="m-4 p-1 text-center font-sm">.m-sm</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="m-4 p-1 text-center font-sm">.m-md</div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="m-4 p-1 text-center font-sm">.m-lg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Components Section -->
+        <section class="my-8">
+            <h2 class="font-bold mb-4">Components</h2>
+    
+            <!-- Buttons -->
+            <div class="p-4">
+                <h3 class="mb-4">Buttons</h3>
+                <p class="mb-4">Includes solid, outline, and ghost variants for primary, success, warning, and danger colors. Also includes a neutral button style.</p>
+    
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-md btn-primary">Primary</button>
+                    <button class="btn btn-md btn-success">Success</button>
+                    <button class="btn btn-md btn-warning">Warning</button>
+                    <button class="btn btn-md btn-danger">Danger</button>
+                </div>
+                <div class="mt-3" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-md btn-primary-outline">Outline</button>
+                    <button class="btn btn-md btn-success-outline">Outline</button>
+                    <button class="btn btn-md btn-warning-outline">Outline</button>
+                    <button class="btn btn-md btn-danger-outline">Outline</button>
+                </div>
+                <div class="mt-3" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-md btn-primary-ghost">Ghost</button>
+                    <button class="btn btn-md btn-success-ghost">Ghost</button>
+                    <button class="btn btn-md btn-warning-ghost">Ghost</button>
+                    <button class="btn btn-md btn-danger-ghost">Ghost</button>
+                </div>
+                <div class="mt-3" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-md btn-neutral">Neutral</button>
+                    <button class="btn btn-md btn-primary" disabled>Disabled</button>
+                </div>
+                <h4 class="font-semibold mt-5 mb-2">Button Sizes</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-sm btn-primary">Small</button>
+                    <button class="btn btn-md btn-primary">Medium</button>
+                    <button class="btn btn-lg btn-primary">Large</button>
+                </div>
+            </div>
+        </section>
+        <!-- Forms Section -->
+        <section class="my-8">
+            <h2 class="font-bold mb-4">Forms</h2>
+            <div>
+                <h3 class="mb-4">Form Elements</h3>
+                <div class="form" style="max-width: 25%;">
+                    <div class="input">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="e.g., Jane Doe">
+                    </div>
+                    <div class="input">
+                        <label for="email">Email (valid)</label>
+                        <input type="email" id="email" class="is-valid" value="jane.doe@example.com">
+                    </div>
+                    <div class="input">
+                        <label for="password">Password (invalid)</label>
+                        <input type="password" id="password" class="is-invalid" value="1234">
+                    </div>
+                    <div class="select">
+                        <label for="framework">Favorite Framework</label>
+                        <select id="framework">
+                            <option>Not Bad CSS</option>
+                            <option>Another CSS</option>
+                        </select>
+                    </div>
+                    <div class="textarea">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" placeholder="Leave a comment..."></textarea>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" id="terms" checked>
+                        <label for="terms">I agree to the terms</label>
+                    </div>
+                      <div class="check-group">
+                        <input type="radio" id="radio1" name="radio-group">
+                        <label for="radio1">Option 1</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Table Section -->
+        <section class="my-8">
+            <h2 class="font-bold mb-4">Tables</h2>
+            <div>
+                <h3 class="mb-4">Table Component</h3>
+                <p class="mb-4">Use <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.table</code> with modifiers like <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.table-striped</code> and <code class="bg-neutral-200 p-xs" style="border-radius: 4px;">.table-hover</code>.</p>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <caption>List of users</caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td><span class="bg-success-400 text-neutral-800 p-xs" style="border-radius: 4px;">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td><span class="bg-warning-400 text-neutral-800 p-xs" style="border-radius: 4px;">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Sam Wilson</td>
+                                <td>sam@example.com</td>
+                                <td><span class="bg-danger-400 text-neutral-800 p-xs" style="border-radius: 4px;">Inactive</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <div class="input">
-      <label for="email">Email (valid)</label>
-      <input id="email" type="email" placeholder="you@example.com" class="is-valid" />
-    </div>
-
-    <div class="input">
-      <label for="password">Password (invalid)</label>
-      <input id="password" type="password" placeholder="Enter password" class="is-invalid input-lg" />
-    </div>
-
-    <div class="input">
-      <label for="disabled">Disabled</label>
-      <input id="disabled" type="text" value="Not editable" disabled />
-    </div>
-
-    <div class="textarea">
-      <label for="message">Message</label>
-      <textarea id="message" placeholder="Write your message..."></textarea>
-    </div>
-
-    <div class="select">
-      <label for="country">Country</label>
-      <select id="country">
-        <option value="">Select country...</option>
-        <option>Canada</option>
-        <option>USA</option>
-        <option>Germany</option>
-        <option>Japan</option>
-      </select>
-    </div>
-  </form>
-
+  </main>
 </body>
 </html>

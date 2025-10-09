@@ -1183,6 +1183,143 @@ meter {
   cursor: pointer;
 }
 
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-collapse: collapse;
+  font-family: "Open Sans", sans-serif;
+}
+.table thead {
+  background-color: var(--color-neutral-50);
+}
+.table thead th {
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--color-neutral-800);
+  text-align: left;
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--color-neutral-200);
+}
+.table tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+.table tfoot tr {
+  border-top: 2px solid var(--color-neutral-200);
+}
+.table tfoot td {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.table-bordered {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius);
+}
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--color-neutral-200);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--color-neutral-50);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.table-compact th,
+.table-compact td {
+  padding: 0.75rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+.table-responsive .table {
+  margin-bottom: 0;
+}
+
+.table-primary {
+  background-color: var(--color-primary-50);
+}
+.table-primary th {
+  background-color: var(--color-primary-100);
+}
+
+.table-success {
+  background-color: var(--color-success-400);
+}
+.table-success th {
+  background-color: var(--color-success-500);
+}
+
+.table-danger {
+  background-color: var(--color-danger-400);
+}
+.table-danger th {
+  background-color: var(--color-danger-500);
+}
+
+.table-warning {
+  background-color: var(--color-warning-400);
+}
+.table-warning th {
+  background-color: var(--color-warning-500);
+}
+
+.table-dark {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-800);
+}
+.table-dark thead {
+  background-color: var(--color-neutral-900);
+}
+.table-dark th,
+.table-dark td {
+  border-color: var(--color-neutral-700);
+}
+.table-dark.table-striped tbody tr:nth-child(odd) {
+  background-color: var(--color-neutral-700);
+}
+.table-dark.table-hover tbody tr:hover {
+  background-color: var(--color-neutral-600);
+}
+
+caption {
+  padding: 1rem;
+  color: var(--color-neutral-500);
+  text-align: left;
+  caption-side: bottom;
+  font-style: italic;
+}
+
+.table-sm {
+  font-size: 14px;
+}
+
+.table-align-middle td,
+.table-align-middle th {
+  vertical-align: middle;
+}
+
+.table-align-top td,
+.table-align-top th {
+  vertical-align: top;
+}
+
+.table-align-bottom td,
+.table-align-bottom th {
+  vertical-align: bottom;
+}
+
 /********** Input Base ***********/
 .input {
   display: flex;

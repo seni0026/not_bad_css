@@ -1,20 +1,25 @@
+@use '../variables/spacing' as sp;
+@use '../variables/typography' as type;
+@use '../variables/font-weights' as weights;
+@use '../variables/font-sizes' as sizes;
+
 // Table variables
 $table-border-color: var(--color-neutral-200);
 $table-stripe-color: var(--color-neutral-50);
 $table-hover-color: var(--color-neutral-100);
 $table-header-bg: var(--color-neutral-50);
 $table-header-color: var(--color-neutral-800);
-$table-cell-padding: map-get($padding, '2');
+$table-cell-padding: map-get(sp.$padding, '2');
 $table-border-width: 1px;
 $table-border-radius: var(--radius);
 
 // Base table styles
 .table {
     width: 100%;
-    margin-bottom: map-get($spacing, 'md');
+    margin-bottom: map-get(sp.$spacing, 'md');
     background-color: transparent;
     border-collapse: collapse;
-    font-family: $font-body;
+    font-family: type.$font-body;
 
     // Table header
     thead {
@@ -90,7 +95,7 @@ $table-border-radius: var(--radius);
 .table-compact {
     th,
     td {
-        padding: map-get($padding, '1');
+        padding: map-get(sp.$padding, '1');
     }
 }
 
@@ -98,7 +103,7 @@ $table-border-radius: var(--radius);
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin-bottom: map-get($spacing, 'md');
+    margin-bottom: map-get(sp.$spacing, 'md');
 
     // Remove margin from table inside responsive wrapper
     .table {
@@ -156,7 +161,7 @@ $table-border-radius: var(--radius);
 
 // Table caption
 caption {
-    padding: map-get($padding, '2');
+    padding: map-get(sp.$padding, '2');
     color: var(--color-neutral-500);
     text-align: left;
     caption-side: bottom;
